@@ -8,8 +8,6 @@ export default function Results(props) {
   if (props.results) {
     return (
       <div className="Results p-4">
-        <h2 className="WordMain mb-2">{props.results[0].meta.stems[0]}</h2>
-
         <h4 className="Pronounciation text-muted  mb-0">
           {props.results[0].hwi.prs[0].mw}
         </h4>

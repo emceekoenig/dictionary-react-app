@@ -12,6 +12,10 @@
   padding: 40px;
 }
 
+.Dictionary h2 {
+  font-weight: 700;
+}
+
 .Dictionary h4 {
   margin-bottom: 20px;
 }

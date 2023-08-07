@@ -45,6 +45,10 @@ export default function Dictionary() {
         </p>
       </section>
 
+      <section className="word">
+        <h2>{keyword}</h2>
+      </section>
+
       <Results results={results} />
     </div>
   );
