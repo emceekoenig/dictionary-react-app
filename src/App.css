@@ -1,0 +1,14 @@
+.App-header {
+  font-family: "Playfair Display", serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  padding: 40px auto;
+  margin: 40px auto;
+}
+
+.App a {
+  text-decoration: none;
+}
