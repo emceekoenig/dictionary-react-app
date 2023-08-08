@@ -11,7 +11,7 @@ export default function App() {
         </header>
 
         <main>
-          <Dictionary />
+          <Dictionary defaultKeyword="buzzword" />
         </main>
 
         <footer className="mt-3">

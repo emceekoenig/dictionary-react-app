@@ -4,25 +4,24 @@
   margin: 0 auto;
 }
 
-.Dictionary section {
-  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
-  border-radius: 8px;
-  background: #fff;
-  margin-top: 10px;
-  padding: 40px;
-}
-
-.Dictionary h2 {
-  font-weight: 700;
-}
-
-.Dictionary h4 {
+.Dictionary h1 {
+  font-size: 18px;
+  font-weight: bold;
   margin-bottom: 20px;
 }
 
+.Dictionary section {
+  background: #fff;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  border-radius: 8px;
+  margin-top: 10px;
+  padding: 30px;
+}
+
 .Dictionary input {
-  border: 1px solid lightgrey;
+  border: 1px solid #ddd;
   border-radius: 5px;
-  padding: 15px;
+  color: #333;
+  padding: 6px 10px;
   width: 100%;
 }

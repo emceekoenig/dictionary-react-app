@@ -5,7 +5,6 @@ export default function Meaning(props) {
   console.log(props.meaning);
   return (
     <div className="Meaning pb-3">
-      <h3 className="WordAlternative">{props.meaning.meta.id}</h3>
       <h4 className="PartsOfSpeech text-muted">{props.meaning.fl}</h4>
 
       {props.meaning.shortdef.map(function (definition, index) {
