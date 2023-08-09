@@ -11,13 +11,16 @@ export default function Meaning(props) {
       {props.meaning.definitions.map(function (definition, index) {
         if (index <= 1) {
           return (
-            <div key={index}>
+            <div
+              key={index}
+              className="pb-2"
+            >
               <div className="definition">{definition.definition}</div>
               <Examples examples={definition.examples} />
               <Synonyms synonyms={definition.synonyms} />
             </div>
           );
-        }
+        } else return null;
       })}
     </div>
   );
