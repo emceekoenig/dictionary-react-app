@@ -9,12 +9,11 @@ export default function Dictionary(props) {
   let [loaded, setLoaded] = useState(false);
 
   function handleResponse(response) {
-    setResults(response.data);
+    setResults(response.data[0]);
   }
 
   function search() {
-    let apiKey = "ee2ed5f8-4097-4ffc-8010-10292a4ecce4";
-    let apiUrl = `https://www.dictionaryapi.com/api/v3/references/collegiate/json/${keyword}?key=${apiKey}`;
+    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
     axios.get(apiUrl).then(handleResponse);
   }
 
