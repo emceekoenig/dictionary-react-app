@@ -1,3 +1,8 @@
+.App {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
 .App-header {
   font-family: "Playfair Display", serif;
   display: flex;
