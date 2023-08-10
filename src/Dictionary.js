@@ -43,6 +43,8 @@ export default function Dictionary(props) {
               placeholder="Search for a word"
               defaultValue={props.defaultKeyword}
               className="form-control"
+              alt="Search"
+              title="Search"
             />
           </form>
           <p className="mt-3">

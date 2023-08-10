@@ -1,3 +1,7 @@
 .Footer {
   text-align: center;
 }
+
+.Footer a {
+  color: rgb(0, 38, 255);
+}

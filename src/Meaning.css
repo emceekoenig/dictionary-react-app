@@ -3,3 +3,7 @@
   line-height: 1.5;
   font-weight: bold;
 }
+
+.Meaning .definition {
+  text-transform: lowercase;
+}

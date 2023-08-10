@@ -7,7 +7,15 @@ export default function App() {
     <div className="App">
       <div className="container">
         <header className="App-header">
-          <h1>Dictionary</h1>
+          <h1>
+            <a
+              href="https://blue-lexicon.netlify.app/"
+              alt="Dictionary Homepage"
+              title="Dictionary Homepage"
+            >
+              Dictionary
+            </a>
+          </h1>
         </header>
 
         <main>
