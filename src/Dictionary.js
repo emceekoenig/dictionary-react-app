@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
 import Error from "./Error";
+import Photos from "./Photos";
 import "./Dictionary.css";
 
 export default function Dictionary(props) {
@@ -9,8 +10,9 @@ export default function Dictionary(props) {
   let [results, setResults] = useState(null);
   let [loaded, setLoaded] = useState(false);
   let [error, setError] = useState(null);
+  let [photos, setPhotos] = useState(null);
 
-  function handleResponse(response) {
+  function handleDictionaryReponse(response) {
     if (response.data.status === "not_found") {
       setError(response.data.message);
     } else {
@@ -18,13 +20,22 @@ export default function Dictionary(props) {
     }
   }
 
+  function handleImagesResponse(response) {
+    console.log(response);
+    setPhotos(response.data.photos);
+  }
+
   function search() {
     let apiKey = `5REMOVED`;
     let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${apiKey}`;
     axios
       .get(apiUrl)
-      .then(handleResponse)
+      .then(handleDictionaryReponse)
       .catch((error) => setError(error));
+
+    let imagesApiKey = "5REMOVED";
+    let imagesApiUrl = `https://api.shecodes.io/images/v1/search?query=${keyword}&key=${imagesApiKey}`;
+    axios.get(imagesApiUrl).then(handleImagesResponse);
   }
 
   function handleSubmit(event) {
@@ -69,6 +80,7 @@ export default function Dictionary(props) {
         </section>
 
         <Results results={results} />
+        <Photos photos={photos} />
       </div>
     );
   } else {
