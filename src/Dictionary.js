@@ -1,20 +1,30 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
+import Error from "./Error";
 import "./Dictionary.css";
 
 export default function Dictionary(props) {
   let [keyword, setKeyword] = useState(props.defaultKeyword);
   let [results, setResults] = useState(null);
   let [loaded, setLoaded] = useState(false);
+  let [error, setError] = useState(null);
 
   function handleResponse(response) {
-    setResults(response.data[0]);
+    if (response.data.status === "not_found") {
+      setError(response.data.message);
+    } else {
+      setResults(response.data);
+    }
   }
 
   function search() {
-    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
-    axios.get(apiUrl).then(handleResponse);
+    let apiKey = `5REMOVED`;
+    let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${apiKey}`;
+    axios
+      .get(apiUrl)
+      .then(handleResponse)
+      .catch((error) => setError(error));
   }
 
   function handleSubmit(event) {
@@ -29,6 +39,10 @@ export default function Dictionary(props) {
   function load() {
     setLoaded(true);
     search();
+  }
+
+  if (error) {
+    return <Error />;
   }
 
   if (loaded) {
