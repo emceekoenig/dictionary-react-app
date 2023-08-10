@@ -9,7 +9,7 @@ export default function App() {
         <header className="App-header">
           <h1>
             <a
-              href="https://blue-lexicon.netlify.app/"
+              href="/"
               alt="Dictionary Homepage"
               title="Dictionary Homepage"
             >
