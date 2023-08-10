@@ -19,7 +19,7 @@ export default function App() {
         </header>
 
         <main>
-          <Dictionary defaultKeyword="buzzword" />
+          <Dictionary defaultKeyword="bee" />
         </main>
 
         <footer className="mt-3">
