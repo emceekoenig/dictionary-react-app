@@ -13,6 +13,7 @@ export default function App() {
               alt="Dictionary Homepage"
               title="Dictionary Homepage"
             >
+              <i className="fa-sharp-duotone fa-solid fa-book fs-2" />{" "}
               Dictionary
             </a>
           </h1>
