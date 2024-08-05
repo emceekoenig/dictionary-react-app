@@ -7,7 +7,7 @@ export default function Footer() {
       <small>
         Website coded by{" "}
         <a
-          href="https://chelsea-koenig.netlify.app/"
+          href="https://chelseakoenig.com/"
           target="_blank"
           rel="noreferrer"
         >
@@ -15,7 +15,7 @@ export default function Footer() {
         </a>{" "}
         and{" "}
         <a
-          href="https://github.com/emceekoenig/dictionary-react"
+          href="https://github.com/emceekoenig/dictionary-react-app"
           target="_blank"
           rel="noreferrer"
         >
