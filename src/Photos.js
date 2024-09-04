@@ -7,10 +7,10 @@ export default function Photos(props) {
       <section className="Photos">
         <div className="row">
           {props.photos.map(function (photo, index) {
-            if (index < 9) {
+            if (index < 2) {
               return (
                 <div
-                  className="col-4"
+                  className="col-12 col-sm-6"
                   key={index}
                 >
                   <a

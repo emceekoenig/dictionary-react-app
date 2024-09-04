@@ -26,14 +26,14 @@ export default function Dictionary(props) {
   }
 
   function search() {
-    let apiKey = `50f181fb5atco86d3e4e13e20785aa08`;
+    let apiKey = process.env.REACT_APP_DICTIONARY_API_KEY;
     let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${apiKey}`;
     axios
       .get(apiUrl)
       .then(handleDictionaryReponse)
       .catch((error) => setError(error));
 
-    let imagesApiKey = "50f181fb5atco86d3e4e13e20785aa08";
+    let imagesApiKey = process.env.REACT_APP_IMAGES_API_KEY;
     let imagesApiUrl = `https://api.shecodes.io/images/v1/search?query=${keyword}&key=${imagesApiKey}`;
     axios.get(imagesApiUrl).then(handleImagesResponse);
   }
